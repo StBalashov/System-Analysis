@@ -1,0 +1,33 @@
+.name "schedule_card"
+.type PN
+
+.places
+p0
+p1
+p3
+p5
+p2
+p4
+p6
+p7
+p8
+
+.transitions
+t1
+t2
+t4
+t3
+t5
+t6
+t7
+
+.flows
+t1: {1*p0} -> {1*p1, 1*p2}
+t2: {1*p1} -> {1*p1, 1*p3}
+t4: {1*p1, 1*p3} -> {1*p5}
+t3: {1*p2} -> {1*p2, 1*p4}
+t5: {1*p2, 1*p4} -> {1*p6}
+t6: {1*p5, 1*p6} -> {1*p7}
+t7: {1*p7} -> {1*p8}
+
+.initial_marking {}

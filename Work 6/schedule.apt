@@ -1,0 +1,33 @@
+.name "schedule"
+.type PN
+
+.places
+p1
+p2
+p3
+p4
+p5
+p7
+p6
+p8
+p9
+
+.transitions
+t1
+t2
+t3
+t5
+t4
+t6
+t7
+
+.flows
+t1: {1*p1} -> {1*p2}
+t2: {1*p2} -> {1*p3}
+t3: {1*p3} -> {1*p4, 1*p5}
+t5: {1*p4, 1*p5, 1*p6} -> {1*p7}
+t4: {1*p4, 1*p5} -> {1*p4, 1*p5, 1*p6}
+t6: {1*p7} -> {1*p8}
+t7: {1*p8} -> {1*p9}
+
+.initial_marking {}
